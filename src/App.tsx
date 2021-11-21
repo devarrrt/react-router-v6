@@ -1,22 +1,28 @@
 import React from 'react'
-import { Routes, Route } from 'react-router-dom';
-import LoginPage from './pages/LoginPage';
+import { Link, Routes, Route } from 'react-router-dom'
+import AboutPage from './pages/AboutPage'
+import HomePage from './pages/HomePage'
+import NotFound from './pages/NotFound'
+import PostsPage from './pages/PostsPage'
+
 
 const App = () => {
+    return (
+        <>
+            <header className="header">
+                <Link to="/"> Home </Link>
+                <Link to="/posts"> Posts </Link>
+                <Link to="/about"> About </Link>
+            </header>
+            <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/posts" element={<PostsPage />} />
+                <Route path="*" element={<NotFound />} />
 
-  const publicRoutes = [
-    { path: "/login", component: <LoginPage />, exact: true }
-  ]
-
-  return (
-    <div>
-      <Routes>
-        {publicRoutes.map(route => (
-          <Route key={route.path} path={route.path} element={route.component} />
-        ))}
-      </Routes>
-    </div>
-  )
+            </Routes>
+        </>
+    )
 }
 
 export default App
