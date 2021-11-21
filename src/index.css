@@ -14,7 +14,7 @@ code {
 
 a{
   text-decoration: none;
-  color: rgb(107, 107, 107)
+  color: rgb(144, 144, 144)
 }
 
 a:hover,
@@ -29,4 +29,21 @@ a:active{
   justify-content: space-around;
   font-size: 20px;
   text-transform: uppercase;
+}
+
+
+
+.footer{
+  position: fixed;
+  width: 100%;
+  color:rgb(92, 92, 92);
+  text-align: center;
+  background-color: blanchedalmond;
+  padding: 20px;
+  bottom: 0;
+}
+
+.active-link{
+  color: rgb(88, 88, 88);
+  text-decoration: underline;
 }
